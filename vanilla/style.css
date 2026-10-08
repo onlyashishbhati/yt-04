@@ -1,0 +1,167 @@
+:root {
+  --bg: #08090a;
+  --bg-elevated: #0d0e11;
+  --bg-elevated-2: #141518;
+  --text-primary: #f2f3f5;
+  --text-secondary: #86898e;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --accent: #6e7bf2;
+  --accent-2: #b98cf0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter",
+    system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+/* Progress bar — driven by lenis.on('scroll') */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 100;
+}
+
+/* Nav / anchor link target for the Lenis.scrollTo() fix */
+.nav {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 100;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  padding: 0.55rem 1.1rem;
+  border-radius: 100px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.nav-link:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-elevated-2);
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6rem 8vw;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.section-hero {
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 20%,
+    rgba(110, 123, 242, 0.14),
+    transparent 70%
+  );
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.section h1 {
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #c7c9d1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  max-width: 42ch;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Horizontal scroll demo — orientation: 'horizontal' */
+.horizontal-section {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.horizontal-track {
+  display: flex;
+  height: 100%;
+  width: 400%;
+}
+
+.h-panel {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  color: var(--text-primary);
+  border-right: 1px solid var(--border);
+}
+
+.h-panel:nth-child(1) {
+  background: linear-gradient(160deg, #121319, #181a22);
+}
+.h-panel:nth-child(2) {
+  background: linear-gradient(160deg, #181a22, #1f212e);
+}
+.h-panel:nth-child(3) {
+  background: linear-gradient(160deg, #1f212e, #262a3d);
+}
+.h-panel:nth-child(4) {
+  background: linear-gradient(160deg, #262a3d, #2d3150);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenis Standalone Demo</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Progress bar for the "scroll-triggered effects" section -->
+  <div class="progress-bar"></div>
+
+  <nav class="nav">
+    <a href="#section2" class="nav-link">Jump to Section 2</a>
+  </nav>
+
+  <main>
+
+    <section class="section section-hero">
+      <span class="eyebrow">Lenis Demo</span>
+      <h1>Lenis Standalone Demo</h1>
+      <p>Scroll down. This page has zero smooth scroll until you add it.</p>
+    </section>
+
+    <section class="section" id="section1">
+      <h2>Section 1</h2>
+      <p>Plain content block. Used to show the basic vertical smooth scroll effect.</p>
+    </section>
+
+    <section class="section" id="section2">
+      <h2>Section 2</h2>
+      <p>This is the anchor link target. Click the nav link at the top to test it.</p>
+    </section>
+
+    <section class="section" id="section3">
+      <h2>Section 3</h2>
+      <p>More vertical content, used for the duration/easing demo.</p>
+    </section>
+
+    <!-- Horizontal scroll section, for the "orientation" demo -->
+    <section class="horizontal-section">
+      <div class="horizontal-track">
+        <div class="h-panel">Panel A</div>
+        <div class="h-panel">Panel B</div>
+        <div class="h-panel">Panel C</div>
+        <div class="h-panel">Panel D</div>
+      </div>
+    </section>
+
+    <section class="section" id="section4">
+      <h2>Section 4</h2>
+      <p>Toggle a class here when the user scrolls past this point, using lenis.on('scroll').</p>
+    </section>
+
+    <section class="section" id="section5">
+      <h2>Section 5</h2>
+      <p>Last section. Bottom of the page.</p>
+    </section>
+
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
